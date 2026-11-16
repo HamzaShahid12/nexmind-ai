@@ -1,0 +1,13 @@
+# Public marketing pages may be indexed. Private areas must not be.
+User-agent: *
+Allow: /
+Disallow: /dashboard
+Disallow: /admin
+Disallow: /login
+Disallow: /register
+Disallow: /forgot-password
+Disallow: /reset-password
+Disallow: /verify-email
+
+# Replace with your API host once deployed (the API serves a live sitemap of public pages and posts):
+# Sitemap: https://api.your-domain.com/sitemap.xml

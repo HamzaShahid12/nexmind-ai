@@ -1,0 +1,1 @@
+import{o as s,c as a,n as l}from"./index-BVx_8k6t.js";const o={__name:"Skeleton",props:{class:{type:String,default:"h-4 w-full"}},setup(r){return(e,n)=>(s(),a("div",{class:l(["animate-pulse rounded-lg bg-slate-200",e.$props.class]),"aria-hidden":"true"},null,2))}};export{o as _};
