@@ -7,18 +7,22 @@ A Laravel 12 REST API + Vue 3 SPA with real OpenAI-backed tools, a credit system
 ## Screenshots
 
 <p align="center">
+  <img src="docs/screenshots/Login.png" alt="Login Page" width="30%">
+</p>
+
+<p align="center">
   <img src="docs/screenshots/home.png" alt="Home page" width="49%">
-  <img src="docs/screenshots/pricing.png" alt="Booking wizard with map" width="49%">
+  <img src="docs/screenshots/pricing.png" alt="Pricing" width="49%">
 </p>
 
 <p align="center">
-  <img src="docs/screenshots/contentwritting.png" alt="Admin dashboard" width="49%">
-  <img src="docs/screenshots/chat.png" alt="Branding and banners" width="49%">
+  <img src="docs/screenshots/contentwritting.png" alt="Content creation" width="49%">
+  <img src="docs/screenshots/chat.png" alt="Ai Chat" width="49%">
 </p>
 
 <p align="center">
-  <img src="docs/screenshots/tools.png" alt="Admin dashboard" width="49%">
-  <img src="docs/screenshots/contact.png" alt="Branding and banners" width="49%">
+  <img src="docs/screenshots/tools.png" alt="All Tools" width="49%">
+  <img src="docs/screenshots/contact.png" alt="Contact Page" width="49%">
 </p>
 
 <p align="center">
@@ -35,7 +39,7 @@ A Laravel 12 REST API + Vue 3 SPA with real OpenAI-backed tools, a credit system
 - **7 AI tools:** Chat, Content Writer, Product Description, Social Media, SEO, Email, Document Summarizer (PDF / TXT / DOCX)
 - **Credits:** per-plan monthly allowance (Free = 100, admin-editable), per-tool cost, transactional locking, no charge on failure, full ledger
 - **Public site:** Home, Features, AI Tools, Pricing, About, Contact, Blog, FAQ
-- **Auth:** register, login, logout, email verification, password reset (Sanctum SPA cookies)
+- **Auth:** register, email/password and Google sign-in, logout, email verification, password reset (Sanctum SPA cookies)
 - **Dashboard:** overview + usage chart, history, saved content, credits, settings
 - **Admin panel:** users, roles, tools, AI settings, plans, credits, generations, usage, blogs, categories, FAQs, contact messages, settings
 - **Security:** Form Requests, Policies, role middleware, rate limiting, prompt-injection guard with delimited untrusted input, API key backend-only, no tokens in localStorage, text-only output rendering (no `v-html`), private document storage with immediate raw-file deletion
@@ -62,7 +66,7 @@ php artisan migrate --seed
 php artisan serve
 # optional, only while editing Vue files:  npm install && npm run dev
 ```
-Open http://localhost:8000
+Open http://localhost:8000. Google sign-in is optional; configure `GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET`, and `GOOGLE_REDIRECT_URI` in `.env` to enable it (see [INSTALL.md](INSTALL.md)).
 
 ## Verification status (honest)
 

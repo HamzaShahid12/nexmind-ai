@@ -5,6 +5,7 @@ import { useAuthStore } from '@/stores/auth'
 import { useToastStore } from '@/stores/toast'
 import { parseError } from '@/services/api'
 import { validateRegister } from '@/utils/validation'
+import GoogleAuthButton from '@/components/auth/GoogleAuthButton.vue'
 
 const auth = useAuthStore()
 const toast = useToastStore()
@@ -42,6 +43,12 @@ async function submit() {
   <div>
     <h1 class="text-2xl font-bold">Create your account</h1>
     <p class="mt-1 text-sm">Start with free monthly credits. No card required.</p>
+    <GoogleAuthButton label="Sign up with Google" class="mt-6" />
+    <div class="my-5 flex items-center gap-4">
+      <span class="h-px flex-1 bg-slate-200"></span>
+      <span class="text-xs font-medium text-slate-400">OR SIGN UP WITH EMAIL</span>
+      <span class="h-px flex-1 bg-slate-200"></span>
+    </div>
     <form class="mt-6 space-y-4" novalidate @submit.prevent="submit">
       <div v-for="f in fields" :key="f[0]">
         <label :for="f[0]" class="label">{{ f[1] }}</label>

@@ -1,10 +1,10 @@
 import axios from 'axios'
 
-const baseURL = import.meta.env.VITE_API_URL ?? ''
+export const appBaseUrl = import.meta.env.VITE_API_URL ?? ''
 
 // Cookie-based Sanctum SPA auth: no tokens are ever stored in localStorage.
 const api = axios.create({
-  baseURL: `${baseURL}/api/v1`,
+  baseURL: `${appBaseUrl}/api/v1`,
   withCredentials: true,
   withXSRFToken: true,
   xsrfCookieName: 'XSRF-TOKEN',
@@ -13,7 +13,7 @@ const api = axios.create({
   timeout: 90000,
 })
 
-export const csrf = () => axios.get(`${baseURL}/sanctum/csrf-cookie`, { withCredentials: true })
+export const csrf = () => axios.get(`${appBaseUrl}/sanctum/csrf-cookie`, { withCredentials: true })
 
 /** Convert any axios error into { message, status, errors } safe for display. */
 export function parseError(error) {

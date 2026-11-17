@@ -30,6 +30,10 @@ php artisan serve
 Open http://localhost:8000 — the site and the API share this one address, so login cookies just work.
 Admin login: `admin@nexmind.test` + the SEED_ADMIN_PASSWORD you set.
 
+## Google sign-in (optional)
+
+In Google Cloud Console, create an OAuth 2.0 Web application client and add the exact callback URL under **Authorized redirect URIs**. For a local Laragon setup, the callback is `http://localhost:8000/auth/google/callback`. Put the client ID and secret in `.env` as `GOOGLE_CLIENT_ID` and `GOOGLE_CLIENT_SECRET`; set `GOOGLE_REDIRECT_URI` to the same callback URL. Keep the client secret server-side and never add it to a `VITE_*` setting.
+
 `public/build` already contains the compiled frontend. To change Vue code:
 ```powershell
 npm install
