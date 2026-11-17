@@ -7,7 +7,7 @@ A Laravel 12 REST API + Vue 3 SPA with real OpenAI-backed tools, a credit system
 ## Screenshots
 
 <p align="center">
-  <img src="docs/screenshots/login.png" alt="Login Page" width="30%">
+  <img src="docs/screenshots/login.png" alt="Login Page" width="80%">
 </p>
 
 <p align="center">
